@@ -1,17 +1,9 @@
 (function () {
-    function activar(quien: string, momento?: string, objeto: string = 'batiseñal') {
 
-        if (momento) {
-            console.log(`${quien} activó la ${objeto} en la ${momento}`);
-        } else {
-            console.log(`${quien} activó la ${objeto}`);
-        }
-
-
+    const miFuction = function (a: string) {
 
     }
 
-    activar('Gordon', 'noche');
 
 })();
 
