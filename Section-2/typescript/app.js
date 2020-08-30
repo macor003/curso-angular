@@ -1,9 +1,13 @@
 "use strict";
 (function () {
-    var NOMBRE = "Mario";
-    var APELLIDO = "Ortega";
-    var EDAD = 27;
-    // const SALIDA  = NOMBRE + " " + APELLIDO + " " + "( Edad: " + EDAD + ")";
-    var SALIDA = NOMBRE + " " + APELLIDO + " (" + EDAD + ")";
-    console.log(SALIDA);
+    function activar(quien, momento, objeto) {
+        if (objeto === void 0) { objeto = 'batiseñal'; }
+        if (momento) {
+            console.log(quien + " activ\u00F3 la " + objeto + " en la " + momento);
+        }
+        else {
+            console.log(quien + " activ\u00F3 la " + objeto);
+        }
+    }
+    activar('Gordon', 'noche');
 })();
