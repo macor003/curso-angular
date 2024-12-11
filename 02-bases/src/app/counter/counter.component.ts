@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   <p>Counter: {{counter}} </p>
 
   <button type="button" class="btn btn-primary btn-sm" (click)="incrementarBy(+1)">+1</button>
-  <button type="button" class="btn btn-danger btn-sm" (click)="resetCounter()">reset</button>
+  <button type="button" class="btn btn-danger btn-sm mx-1" (click)="resetCounter()">reset</button>
   <button type="button" class="btn btn-success btn-sm" (click)="incrementarBy(-1)">-1</button>
+  <hr>
 
   `
 })
