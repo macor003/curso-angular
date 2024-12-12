@@ -15,10 +15,14 @@
 
 </dl>
 
-<button (click)="changeName()" class="btn btn-outline-primary mx-2">
+<button *ngIf="name !== 'Spiderman'" (click)="changeName()" class="btn btn-primary mx-1">
   Cambiar nombre
 </button>
 
-<button (click)="changeAge()" class="btn btn-outline-success">
+<button  *ngIf="age !== 20"(click)="changeAge()" class="btn btn-success ">
   Cambiar edad
+</button>
+
+<button *ngIf="name === 'Spiderman' || age === 20 " (click)="reset()" class="btn btn-warning mx-1">
+  Reset
 </button>
