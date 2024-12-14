@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class AppComponent {
-  public title: string = 'Hola Mundo!';
+  public title: string = 'Curso Angular!';
 
 }
