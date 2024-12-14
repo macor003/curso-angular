@@ -5,6 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main-page.component.html',
   standalone: false
 })
-export class DbzComponent {
+export class MainPageComponent {
 
 }
