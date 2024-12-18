@@ -13,6 +13,12 @@ export class MainPageComponent {
     { name: 'Vegetta', power: 7500 },
     { name: 'Krillin', power: 1000 },
     { name: 'Trunks', power: 100 },
-  ]
+  ];
+
+  onNewCharacter(character: Character): void{
+    console.log('MainPage');
+    console.log(character);
+
+  }
 
 }
