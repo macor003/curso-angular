@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-dbz-add-character',
@@ -6,4 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './add-character.component.css',
   standalone: false
 })
-export class AddCharacterComponent { }
+export class AddCharacterComponent {
+
+  public character: Character = {
+    name: 'Trunks',
+    power: 10
+  };
+
+  emitCharacter(): void{
+  console.log(this.character);
+  };
+ }
