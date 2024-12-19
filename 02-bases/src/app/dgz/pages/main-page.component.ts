@@ -12,12 +12,13 @@ export class MainPageComponent {
     { name: 'Goku', power: 9500 },
     { name: 'Vegetta', power: 7500 },
     { name: 'Krillin', power: 1000 },
-    { name: 'Trunks', power: 100 },
+    { name: 'Trunks', power: 100 }
   ];
 
   onNewCharacter(character: Character): void{
-    console.log('MainPage');
+    this.characters.push(character);
     console.log(character);
+    console.log(this.characters);
 
   }
 

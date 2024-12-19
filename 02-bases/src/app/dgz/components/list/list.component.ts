@@ -11,4 +11,9 @@ export class ListComponent {
 
   @Input()
   public characterList: Character[]=[];
+
+  onDeleteCharacter(index: number):void{
+    console.log(index);
+    this.characterList.splice(index,1);
+  }
 }

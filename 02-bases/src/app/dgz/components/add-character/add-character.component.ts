@@ -13,8 +13,8 @@ export class AddCharacterComponent {
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   public character: Character = {
-    name: 'Trunks',
-    power: 10
+    name: '',
+    power: 0
   };
 
   emitCharacter(): void {
@@ -23,7 +23,6 @@ export class AddCharacterComponent {
 
     this.onNewCharacter.emit(this.character);
 
-    this.character.name = '';
-    this.character.power = 0;
+    this.character = { name: '', power: 0 };
   };
 }
