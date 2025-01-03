@@ -15,11 +15,17 @@ export class MainPageComponent {
     { name: 'Trunks', power: 100 }
   ];
 
-  onNewCharacter(character: Character): void{
+  onNewCharacter(character: Character): void {
     this.characters.push(character);
     console.log(character);
     console.log(this.characters);
 
+  }
+
+  onDeleteEvent(index: number): void {
+    console.log("Main page Component");
+    console.log(index);
+    this.characters.splice(index,1);
   }
 
 }
