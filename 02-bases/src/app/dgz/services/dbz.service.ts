@@ -15,16 +15,16 @@ export class DbzService {
     { id: uuid(), name: 'Trunks', power: 100 }
   ];
 
-  onNewCharacter(character: Character): void {
-
-    const newCharacter : Character = {id: uuid(), ...character};
-
+  addCharacter(character: Character): void {
+    const newCharacter: Character = { id: uuid(), ...character };
     this.characters.push(newCharacter);
   }
 
-  onDeleteEvent(index: number): void {
-    console.log("Main page Component");
-    console.log(index);
-    this.characters.splice(index, 1);
+  // onDeleteEvent(index: number): void {
+  //   this.characters.splice(index, 1);
+  // }
+
+  deleteCharacterById(id: string): void {
+    this.characters = this.characters.filter(characters => characters.id !== id);
   }
 }
