@@ -6,7 +6,7 @@ import { CounterModule } from './counter/counter.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeoresModule } from './heroes/heroes.module';
-import { DbzModule } from './dgz/dgz.module';
+import { DbzModule } from './dgz/dbz.module';
 
 @NgModule({
   declarations: [
