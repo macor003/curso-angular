@@ -7,7 +7,7 @@ export class GifsService {
   private _tagHistory: string[] = [];
   constructor() { }
 
-  get tagHistory() {
+  get tagsHistory() {
     return [...this._tagHistory];
   }
 
