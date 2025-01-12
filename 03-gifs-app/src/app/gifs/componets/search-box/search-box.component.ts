@@ -4,18 +4,11 @@ import { GifsService } from '../../services/gifs.service';
 @Component({
   selector: 'gifs-search-box',
   standalone: false,
-  template: `
-    <h5>Buscar:</h5>
-    <input type ="text" placeholder="Buscar gifs..."
-    class="form-control"
-    (keyup.enter)="searchTag()"
-    #searchBox
-    />
-  `,
+  templateUrl: './search-box.component.html',
 })
 export class SearchBoxComponent {
 
-  constructor( private gifsService: GifsService ){}
+  constructor(private gifsService: GifsService) { }
 
   @ViewChild('searchBox')
   public searchBoxInput!: ElementRef<HTMLInputElement>;

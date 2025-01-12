@@ -1,0 +1,9 @@
+<form class="form mx-auto" style="width: 70%;">
+  <h5 class="text-center">Buscar:</h5>
+  <div class="input-group">
+    <input type="text" placeholder="Buscar gifs..." class="form-control" (keypress.enter)="searchTag()" #searchBox />
+  </div>
+  <div class="text-center" style="margin-top: 10px;">
+    <button type="submit" class="btn btn-primary" (click)="searchTag()" style="width: 20%; height: 40px;">Buscar</button>
+  </div>
+</form>
