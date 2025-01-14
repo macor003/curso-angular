@@ -13,10 +13,16 @@ export class LazyImageComponent implements OnInit {
   @Input()
   public alt!: string;
 
+  public hasLoaded = false;
+
   ngOnInit(): void {
     if (!this.url) {
       throw new Error('The url property is required');
     }
+  }
+
+  onLoad(): void {
+    this.hasLoaded = true;
   }
 
 
