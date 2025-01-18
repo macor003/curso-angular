@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class ByCapitalPageComponent {
 
+  searchByCapital(capital: string): void {
+    console.log('Buscar por capital:');
+    console.log({capital});
+  }
+
 }

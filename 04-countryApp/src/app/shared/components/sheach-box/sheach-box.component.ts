@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'shared-sheach-box',
@@ -11,4 +11,12 @@ export class SheachBoxComponent {
 
   @Input()
   public placeholder: string = 'Buscar...';
+
+  @Output()
+  public onValue = new EventEmitter<string>();
+
+  emitEvent(value: any): void {
+    this.onValue.emit(value);
+  }
+
 }
