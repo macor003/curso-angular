@@ -1,0 +1,33 @@
+<div *ngIf="countries.length === 0 else table" class="alert alert-warning text-center">
+  No hay paises para mostrar.
+</div>
+
+<ng-template #table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Bandera</th>
+        <th>Nombre</th>
+        <th>Capital</th>
+        <th>Continente</th>
+        <th>Región</th>
+        <th>Área</th>
+        <th>Población</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries">
+        <td>
+          <img [src]="country.flags.svg" alt="Bandera de {{ country.name }}" class="img-thumbnail" style="width: 35px;">
+        </td>
+        <td>{{ country.name.common }}</td>
+        <td>{{ country.capital }}</td>
+        <td>{{ country.region }}</td>
+        <td>{{ country.subregion }}</td>
+        <td>{{ country.area | number }} km²</td>
+        <td>{{ country.population | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</ng-template>

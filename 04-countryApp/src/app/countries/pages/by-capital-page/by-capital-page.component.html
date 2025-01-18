@@ -10,10 +10,6 @@
 <div class="row">
   <div class="col">
     <hr>
-    <ul>
-      <li *ngFor="let country of countries">
-        {{ country.capital }} - {{ country.population }} - {{ country.region }}
-      </li>
-    </ul>
+    <countries-table [countries]="countries"></countries-table>
   </div>
 </div>
