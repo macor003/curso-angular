@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CountriesService } from '../../services/country.service';
 
 @Component({
   selector: 'app-country-page',
   standalone: false,
-  
+
   templateUrl: './country-page.component.html',
   styles: ``
 })
-export class CountryPageComponent {
+export class CountryPageComponent implements OnInit {
+
+  constructor(private activatedRoute: ActivatedRoute, private countriesService: CountriesService) { }
+
+  ngOnInit(): void {
+    this.activatedRoute.params
+      .subscribe(({ id }) => {
+        this.countriesService.searchByAlphaCode(id).subscribe(country => {
+          console.log({ country });
+        });
+      });
+  }
 
 }
