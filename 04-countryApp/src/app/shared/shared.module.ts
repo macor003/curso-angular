@@ -6,6 +6,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SheachBoxComponent } from './components/sheach-box/sheach-box.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 
 
@@ -15,7 +16,8 @@ import { SheachBoxComponent } from './components/sheach-box/sheach-box.component
     AboutPageComponent,
     SidebarComponent,
     ContactPageComponent,
-    SheachBoxComponent
+    SheachBoxComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { SheachBoxComponent } from './components/sheach-box/sheach-box.component
     AboutPageComponent,
     SidebarComponent,
     ContactPageComponent,
-    SheachBoxComponent
+    SheachBoxComponent,
+    LoadingSpinnerComponent
   ]
 })
 export class SharedModule { }
