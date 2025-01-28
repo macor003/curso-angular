@@ -4,7 +4,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'shared-sheach-box',
   standalone: false,
 
-  templateUrl: './sheach-box.component.html',
+  templateUrl: './search-box.component.html',
   styles: ``
 })
 export class SheachBoxComponent {
@@ -17,6 +17,10 @@ export class SheachBoxComponent {
 
   emitEvent(value: any): void {
     this.onValue.emit(value);
+  }
+
+  onKeyPress(searchTerm: string) {
+    console.log(searchTerm);
   }
 
 }
