@@ -2,8 +2,12 @@
 <hr>
 
 <div class="row">
-  <div class="col">
-    <shared-sheach-box (onDebounce)="searchByRegion($event)"></shared-sheach-box>
+  <div class="col text-center">
+    <button *ngFor="let region of regions" class="btn mx-2 "
+    [ngClass]="{ 'btn-primary': region === selectedRegion }"
+    (click)="searchByRegion(region)">
+      {{ region }}
+    </button>
   </div>
 </div>
 
