@@ -1,2 +1,3 @@
 <input type="text" class="form-control" [placeholder]="placeholder"
-(keyup)="onKeyPress(searchBox.value)" #searchBox>
+(keyup)="onKeyPress(searchBox.value)"
+(keyup.enter)="emitEvent(searchBox.value)" #searchBox>
