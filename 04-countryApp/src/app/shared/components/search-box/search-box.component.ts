@@ -35,10 +35,6 @@ export class SheachBoxComponent implements OnInit, OnDestroy{
     this.debouncerSubscription?.unsubscribe();
   }
 
-  emitEvent(value: any): void {
-    this.onValue.emit(value);
-  }
-
   onKeyPress(searchTerm: string) {
     this.debouncer.next(searchTerm);
   }
