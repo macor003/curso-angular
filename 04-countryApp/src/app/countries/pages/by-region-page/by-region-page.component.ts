@@ -35,4 +35,5 @@ export class ByRegionPageComponent {
       });
     console.log({ capital: region });
   }
+
 }
