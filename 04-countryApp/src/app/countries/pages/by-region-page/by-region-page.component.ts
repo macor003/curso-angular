@@ -21,7 +21,7 @@ export class ByRegionPageComponent {
 
   public isLoading: boolean = false;
 
-  constructor(private countriesService: CountriesService) { }
+  constructor(private readonly countriesService: CountriesService) { }
 
   searchByRegion(region: Region): void {
 

@@ -1,14 +1,14 @@
 import { catchError, delay, map, Observable, of } from 'rxjs';
-import { Country } from '../interfaces/country';
+import { Country } from '../interfaces/country.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class CountriesService {
 
-  private apiUrl = 'https://restcountries.com/v3.1';
+  private readonly apiUrl = 'https://restcountries.com/v3.1';
 
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   private getCountriesRequet(url: string): Observable<Country[]> {
     return this.http.get<Country[]>(url)
